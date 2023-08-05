@@ -12,7 +12,6 @@ RoxygenNote: 7.2.3
 URL: https://github.com/lddurbin/packagepal
 BugReports: https://github.com/lddurbin/packagepal/issues
 Imports: 
-    devtools,
     pkgbuild,
     usethis,
     utils
