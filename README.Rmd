@@ -34,9 +34,16 @@ devtools::install_github("lddurbin/packagepal")
 
 To get started with packagepal, call the following function and follow the instructions:
 
-```{r example, eval=FALSE}
+```{r starting, eval=FALSE}
 packagepal::pal_start()
 ```
+
+Alternatively, to see a check-list of recommendations for building a package, simply call:
+
+```{r package_checklist}
+packagepal::checklist()
+```
+
 
 ## Acknowledgements
 

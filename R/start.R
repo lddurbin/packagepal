@@ -18,51 +18,6 @@ pal_start <- function() {
 }
 
 
-#' A Check List For Building A Package
-#'
-#' @description
-#' A check-list of things you should do when building a R package from scratch.
-#'
-#'
-#' @return The id of the new container element, invisibly.
-#'
-#' @export
-pal_checklist <- function() {
-  cli::cli_ol(c(
-    "Install XCode (on MacOS) or Rtools (on Windows)",
-    "Install Git",
-    "Install the {.pkg devtools} package",
-    "Check if your package name is available",
-    "Create your package (but be deliberate about {.emph where} you create it!)",
-    "Make your package a Git repository",
-    "Put the package on GitHub as a remote repository",
-    "Create your first R script",
-    "Don't forget to regularly commit your changes and push them to GitHub",
-    "Add object documentation using roxygen comments",
-    "Run {.fn document} to render your documentation",
-    "Create associated unit tests for your functions",
-    "Check for test coverage",
-    "Add a license",
-    "Update the DESCRIPTION file: edit the title, include author(s), write a one-paragraph description",
-    "Add a package-level help page with {.fn use_package_doc}",
-    "Run {.fn check} from time to time",
-    "Document your package dependencies",
-    "Include a Citation File with {.fn cff_write}",
-    "Add a README file with {.fn use_readme_rmd}",
-    "Edit and render the README",
-    "Add the R CMD check action",
-    "Add a vignette",
-    "Configure your package for {.pkg pkgdown}",
-    "Build the website locally",
-    "Build and host the website on GitHub",
-    "Add the workflow for the test coverage GitHub Action",
-    "Add the test coverage action",
-    "Add a News page",
-    "Don't forget to regularly commit your changes and push them to GitHub"
-    ))
-}
-
-
 #' Are Package Development Toolchains Installed?
 #'
 #' @param os_name The name of the user's Operating System.
