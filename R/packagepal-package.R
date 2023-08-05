@@ -3,6 +3,7 @@
 
 ## usethis namespace: start
 #' @importFrom available available
+#' @importFrom cli cli_ol
 #' @importFrom mockery mock
 #' @importFrom mockery stub
 #' @importFrom usethis ui_done
