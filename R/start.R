@@ -29,7 +29,7 @@ pal_start <- function() {
 #' @export
 pal_checklist <- function() {
   cli::cli_ol(c(
-    "Install XCode (on MacOS) or Rtools  (on Windows)",
+    "Install XCode (on MacOS) or Rtools (on Windows)",
     "Install Git",
     "Install the {.pkg devtools} package",
     "Check if your package name is available",
