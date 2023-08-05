@@ -52,7 +52,7 @@ pal_check_working_directory <- function() {
 #'
 #' @export
 pal_use_git <- function() {
-  ui_done("Ok, I'll make this package a Git repository. Afterwards, call {ul_code('pal_use_github()')}")
+  ui_done("Ok, I'll make this package a Git repository. Afterwards, call {ui_code('pal_use_github()')}")
 
   usethis::use_git()
 }
@@ -62,7 +62,7 @@ pal_use_git <- function() {
 #'
 #' @export
 pal_use_github <- function() {
-  ui_done("Ok, I'll put this package on GitHub as remote repository. Afterwards, call {ul_code('pal_make_script()')}")
+  ui_done("Ok, I'll put this package on GitHub as remote repository. Afterwards, call {ui_code('pal_make_script()')}")
 
   usethis::use_github()
 }
