@@ -22,7 +22,7 @@ package_name_check <- function() {
 #' @return Path to the newly created package, invisibly.
 #'
 #' @export
-create_package <- function(package_name) {
+pal_create_package <- function(package_name) {
   if(ui_yeah("Do you want to create '{ui_value(package_name)}'?")) {
     if(pal_check_working_directory()) {
       ui_done("Awesome! I'll go ahead and make your package. When that's done, call {ui_code('pal_version_control()')} to continue.")
