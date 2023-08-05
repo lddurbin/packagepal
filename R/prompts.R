@@ -11,7 +11,7 @@ get_os_name <- function() {
 
 check_for_rtools <- function() {
   if(pkgbuild::find_rtools()) {
-    ui_oops("You haven't installed Rtools yet.")
+    install_toolchain("Rtools", "https://cran.r-project.org/bin/windows/Rtools/")
   } else {
     ui_done("Congrats, you've already installed Rtools!")
   }
@@ -20,18 +20,18 @@ check_for_rtools <- function() {
 
 check_for_xcode <- function() {
   if(grep("/", system("xcode-select -p", intern = TRUE)) != 1) {
-    install_xcode()
+    install_toolchain("XCode", "https://apps.apple.com/us/app/xcode/id497799835")
   } else {
     ui_done("Congrats, you've already installed XCode!")
   }
 }
 
 
-install_xcode <- function() {
-  if(ui_yeah("You haven't installed XCode yet. Do you want to install it now?")) {
-    browseURL("https://apps.apple.com/us/app/xcode/id497799835")
+install_toolchain <- function(toolchain, url) {
+  if(ui_yeah("You haven't installed {ui_value(toolchain)} yet. Do you want to install it now?")) {
+    browseURL(url)
   } else {
-    ui_done("OK, I won't download XCode right now.")
+    ui_done("OK, I won't download {ui_value(toolchain)} right now.")
   }
 }
 
