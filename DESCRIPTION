@@ -1,9 +1,10 @@
 Package: packagepal
-Title: What the Package Does (One Line, Title Case)
+Title: A Package For Package Builders
 Version: 0.0.0.9000
 Authors@R: 
     person("Lee", "Durbin", , "l.d.durbin@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: A suite of tools to help users on their journey towards building a 
+    package.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

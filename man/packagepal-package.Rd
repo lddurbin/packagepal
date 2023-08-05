@@ -4,9 +4,9 @@
 \name{packagepal-package}
 \alias{packagepal}
 \alias{packagepal-package}
-\title{packagepal: What the Package Does (One Line, Title Case)}
+\title{packagepal: A Package For Package Builders}
 \description{
-What the package does (one paragraph).
+A suite of tools to help users on their journey towards building a package.
 }
 \seealso{
 Useful links:
