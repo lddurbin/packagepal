@@ -48,7 +48,7 @@ pal_checklist <- function() {
     "Run {.fn check} from time to time",
     "Document your package dependencies",
     "Include a Citation File with {.fn cff_write}",
-    "Add a README file",
+    "Add a README file with {.fn use_readme_rmd}",
     "Edit and render the README",
     "Add the R CMD check action",
     "Add a vignette",
