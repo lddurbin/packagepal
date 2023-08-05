@@ -48,11 +48,21 @@ pal_check_working_directory <- function() {
 }
 
 
-#' Initialise a git repository
+#' Initialise A Git Repository
 #'
 #' @export
 pal_use_git <- function() {
   ui_done("Ok, I'll make this package a Git repository. Afterwards, call {ul_code('pal_use_github()')}")
 
   usethis::use_git()
+}
+
+
+#' Put Package On GitHub
+#'
+#' @export
+pal_use_github <- function() {
+  ui_done("Ok, I'll put this package on GitHub as remote repository. Afterwards, call {ul_code('pal_make_script()')}")
+
+  usethis::use_github()
 }
