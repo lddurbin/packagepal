@@ -1,27 +1,12 @@
-#' Check If A Package Name Is Available And Create It
+#' Check If A Package Name Is Available
 #'
 #' @return Messages in the console.
 #'
 #' @export
-pal_create_package <- function() {
+package_name_check <- function() {
   package_name <- readline("What will you name your package? ")
 
-  package_name_check(package_name)
-
-  switch_to_package(package_name)
-}
-
-
-#' Check If A Package Name Is Available
-#'
-#' @param package_name The name of the package you're going to create, passed as
-#'   a character string.
-#'
-#' @return Messages in the console.
-#'
-#' @noRd
-package_name_check <- function(package_name) {
-  if(ui_yeah("Do you want to see if '{ui_value(package_name)}' is available?")) {
+  if(ui_yeah("Do you want to see if the name '{ui_value(package_name)}' is available?")) {
     available(package_name, browse = FALSE)
   } else {
     ui_done("Ok, I won't do that right now.")
@@ -36,9 +21,9 @@ package_name_check <- function(package_name) {
 #'
 #' @return Path to the newly created package, invisibly.
 #'
-#' @noRd
-switch_to_package <- function(package_name) {
-  if(ui_yeah("Do you want to see create '{ui_value(package_name)}'?")) {
+#' @export
+create_package <- function(package_name) {
+  if(ui_yeah("Do you want to create '{ui_value(package_name)}'?")) {
     if(pal_check_working_directory()) {
       ui_done("Awesome! I'll go ahead and make your package. When that's done, call {ui_code('pal_version_control()')} to continue.")
       usethis::create_package(package_name)

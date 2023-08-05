@@ -14,7 +14,7 @@ pal_start <- function() {
   check_for_package("devtools")
   pal_check_git_token()
 
-  ui_info("You have the prerequisites for building your package. Call {ui_code('pal_create_package()')} to continue.")
+  ui_info("You have the prerequisites for building your package. Call {ui_code('package_name_check()')} or go straight to {ui_code('pal_create_package()')} to continue.")
 }
 
 
@@ -49,10 +49,10 @@ check_for_package_development_toolchain <- function(os_name = get_os_name()) {
 #'   message to the console.
 #'
 #' @noRd
-check_for_git <- function(os_name = get_os_name()) {
+check_for_git <- function(os_name = get_os_name(), testing = FALSE) {
   git_check <- system("git --version", intern = TRUE)
 
-  if(!grepl("version", git_check)) {
+  if(!testing && !grepl("version", git_check)) {
     pal_install_software("Git", "https://git-scm.com/downloads")
   } else {
     ui_done("Congrats, you've already installed Git!")
@@ -66,8 +66,8 @@ check_for_git <- function(os_name = get_os_name()) {
 #'   message to the console.
 #'
 #' @noRd
-pal_check_git_token <- function() {
-  if(ui_yeah("Would you like to be guided through GitHub token troubleshooting and setup?")) {
+pal_check_git_token <- function(testing = FALSE) {
+  if(!testing && ui_yeah("Would you like to be guided through GitHub token troubleshooting and setup?")) {
     usethis::gh_token_help()
   } else {
     ui_done("OK, I won't do that right now.")
@@ -87,8 +87,8 @@ pal_check_git_token <- function() {
 #'   message to the console.
 #'
 #' @noRd
-check_for_package <- function(package) {
-  if(!require(package, character.only = TRUE, quietly = TRUE)) {
+check_for_package <- function(package, testing = FALSE) {
+  if(!testing && !require(package, character.only = TRUE, quietly = TRUE)) {
     pal_install_package(package)
   } else {
     ui_done("Congrats, you've already installed {ui_value(package)}!")
@@ -121,7 +121,7 @@ get_os_name <- function() {
 #'   message to the console.
 #'
 #' @noRd
-check_for_rtools <- function() {
+check_for_rtools <- function(testing = FALSE) {
   if(pkgbuild::find_rtools()) {
     pal_install_software("Rtools", "https://cran.r-project.org/bin/windows/Rtools/")
   } else {
@@ -139,8 +139,8 @@ check_for_rtools <- function() {
 #'   message to the console.
 #'
 #' @noRd
-check_for_xcode <- function() {
-  if(grep("/", system("xcode-select -p", intern = TRUE)) != 1) {
+check_for_xcode <- function(testing = FALSE) {
+  if(!testing && grep("/", system("xcode-select -p", intern = TRUE)) != 1) {
     pal_install_software("XCode", "https://apps.apple.com/us/app/xcode/id497799835")
   } else {
     ui_done("Congrats, you've already installed XCode!")
@@ -158,8 +158,8 @@ check_for_xcode <- function() {
 #'   the user is redirected to their browser via {browseURL()}.
 #'
 #' @noRd
-pal_install_software <- function(software, url) {
-  if(ui_yeah("You haven't installed {ui_value(software)} yet. Do you want to install it now?")) {
+pal_install_software <- function(software, url, testing = FALSE) {
+  if(!testing && ui_yeah("You haven't installed {ui_value(software)} yet. Do you want to install it now?", shuffle = FALSE)) {
     browseURL(url)
   } else {
     ui_done("OK, I won't download {ui_value(software)} right now.")
@@ -175,8 +175,8 @@ pal_install_software <- function(software, url) {
 #'   invisible {NULL} if {install.packages()} is called.\
 #'
 #' @noRd
-pal_install_package <- function(package) {
-  if(ui_yeah("You haven't installed {ui_value(package)} yet. Do you want to install it now?")) {
+pal_install_package <- function(package, testing = FALSE) {
+  if(!testing && ui_yeah("You haven't installed {ui_value(package)} yet. Do you want to install it now?")) {
     install.packages(package)
   } else {
     ui_done("OK, I won't install {ui_value(package)} right now.")
