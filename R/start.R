@@ -176,7 +176,7 @@ get_os_name <- function() {
 #'
 #' @noRd
 check_for_rtools <- function(testing = FALSE) {
-  if(pkgbuild::find_rtools()) {
+  if(!testing && pkgbuild::find_rtools()) {
     pal_install_software("Rtools", "https://cran.r-project.org/bin/windows/Rtools/")
   } else {
     ui_done("Congrats, you've already installed Rtools!")
