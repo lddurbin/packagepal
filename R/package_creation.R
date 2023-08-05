@@ -25,7 +25,7 @@ package_name_check <- function() {
 pal_create_package <- function(package_name) {
   if(ui_yeah("Do you want to create '{ui_value(package_name)}'?")) {
     if(pal_check_working_directory()) {
-      ui_done("Awesome! I'll go ahead and make your package. When that's done, call {ui_code('pal_version_control()')} to continue.")
+      ui_done("Awesome! I'll go ahead and make your package. When that's done, call {ui_code('pal_use_git()')} to continue.")
       usethis::create_package(package_name)
     }
   } else {
@@ -45,4 +45,14 @@ pal_check_working_directory <- function() {
   }
 
   return(TRUE)
+}
+
+
+#' Initialise a git repository
+#'
+#' @export
+pal_use_git <- function() {
+  ui_done("Ok, I'll make this package a Git repository. Afterwards, call {ul_code('pal_use_github()')}")
+
+  usethis::use_git()
 }

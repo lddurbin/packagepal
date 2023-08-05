@@ -92,6 +92,8 @@ check_for_package_development_toolchain <- function(os_name = get_os_name()) {
 #' Is Git Installed?
 #'
 #' @param os_name The name of the user's Operating System.
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @return A side-effect of either {ui_done}, or {ui_yeah}, returned as a
 #'   message to the console.
@@ -112,6 +114,8 @@ check_for_git <- function(os_name = get_os_name(), testing = FALSE) {
 #'
 #' @return A side-effect of either {ui_done}, or {ui_yeah}, returned as a
 #'   message to the console.
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @noRd
 pal_check_git_token <- function(testing = FALSE) {
@@ -130,6 +134,8 @@ pal_check_git_token <- function(testing = FALSE) {
 #'
 #'
 #' @param package The name of a R package, passed as a character string.
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @return A side-effect of either {ui_done}, or {ui_yeah}, returned as a
 #'   message to the console.
@@ -165,6 +171,9 @@ get_os_name <- function() {
 #' @description Check whether or not Rtools is installed. Offer to install it if
 #'   it's not.
 #'
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
+#'
 #' @return A side-effect of either {ui_done}, or {ui_yeah}, returned as a
 #'   message to the console.
 #'
@@ -182,6 +191,9 @@ check_for_rtools <- function(testing = FALSE) {
 #'
 #' @description Check whether or not XCode is installed. Offer to install it if
 #'   it's not.
+#'
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @return A side-effect of either {ui_done}, or {ui_yeah}, returned as a
 #'   message to the console.
@@ -201,6 +213,8 @@ check_for_xcode <- function(testing = FALSE) {
 #' @param software The name of the software as a character string.
 #' @param url A character string containing the URL to the website from where
 #'   the software can be downloaded.
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @return Either a message to the console returned from {ui_done()}, or else
 #'   the user is redirected to their browser via {browseURL()}.
@@ -218,6 +232,8 @@ pal_install_software <- function(software, url, testing = FALSE) {
 #' Offer To Install A R Package
 #'
 #' @param package The name of the R package as a character string.
+#' @param testing Is this function being used in a test ({TRUE}) or not
+#'   ({FALSE})?
 #'
 #' @return Either a message to the console returned from {ui_done()}, or
 #'   invisible {NULL} if {install.packages()} is called.\
