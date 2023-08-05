@@ -5,27 +5,33 @@ get_os_name <- function() {
     return("MacOS")
   } else {
     return("Linux")
-
   }
 }
 
 
 check_for_rtools <- function() {
   if(pkgbuild::find_rtools()) {
-    cli::cli_alert_danger("You haven't installed Rtools yet.")
+    ui_oops("You haven't installed Rtools yet.")
   } else {
-    cli::cli_alert_success("Congrats, you've already installed Rtools!")
+    ui_done("Congrats, you've already installed Rtools!")
   }
 }
 
 
 check_for_xcode <- function() {
-  xcode_path <- grep("/", system("xcode-select -p", intern = TRUE))
-
-  if(xcode_path != 1) {
-    cli::cli_alert_danger("You haven't installed XCode yet.")
+  if(grep("/", system("xcode-select -p", intern = TRUE)) != 1) {
+    install_xcode()
   } else {
-    cli::cli_alert_success("Congrats, you've already installed XCode!")
+    ui_done("Congrats, you've already installed XCode!")
+  }
+}
+
+
+install_xcode <- function() {
+  if(ui_yeah("You haven't installed XCode yet. Do you want to install it now?")) {
+    browseURL("https://apps.apple.com/us/app/xcode/id497799835")
+  } else {
+    ui_done("OK, I won't download XCode right now.")
   }
 }
 
@@ -40,6 +46,6 @@ check_for_package_development_toolchain <- function(os_name = get_os_name()) {
   }
 
   if(os_name == "Linux") {
-    cli::cli_alert_danger("You seem to be using Linux. {package packagepal} doesn't support Linux, but you probably don't need to use it anyway right?")
+    ui_oops("You seem to be using Linux. {packagepal} doesn't support Linux, but you probably don't need to use it anyway right?")
   }
 }
