@@ -13,6 +13,8 @@ pal_start <- function() {
   check_for_git()
   check_for_package("devtools")
   pal_check_git_token()
+
+  ui_info("You have the prerequisites for building your package. Call {ui_code('pal_create_package()')} to continue.")
 }
 
 
