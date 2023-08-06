@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/lddurbin/packagepal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lddurbin/packagepal/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/lddurbin/packagepal/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/lddurbin/packagepal/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of packagepal is to be a good pal for R package builders.
@@ -56,7 +57,7 @@ packagepal::checklist()
 #> 15. Add a package-level help page with `usethis::use_package_doc()`
 #> 16. Run `devtools::check()` from time to time
 #> 17. Document your package dependencies with either
-#> `usethis::use_package('package_name')` or
+#> `usethis::use_package('package_name', min_version = TRUE)` or
 #> `usethis::use_import_from('package_name', 'function_name')`
 #> 18. Include a Citation File with `cffr::cff_write()`
 #> 19. Add a README file with `usethis::use_readme_rmd()`
