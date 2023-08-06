@@ -13,12 +13,8 @@ The goal of packagepal is to be a good pal for R package builders.
 
 ## Installation
 
-You can install the development version of packagepal from
-[GitHub](https://github.com/) with:
-
 ``` r
-# install.packages("devtools")
-devtools::install_github("lddurbin/packagepal")
+install.packages("packagepal")
 ```
 
 ## Get Started
