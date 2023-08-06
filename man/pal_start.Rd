@@ -4,7 +4,11 @@
 \alias{pal_start}
 \title{Package Prerequisites}
 \usage{
-pal_start()
+pal_start(install_missing_packages = TRUE)
+}
+\arguments{
+\item{install_missing_packages}{Install missing packages automatically?
+Defaults to {TRUE}.}
 }
 \value{
 Each check is called for its side-effect, returned as a message to

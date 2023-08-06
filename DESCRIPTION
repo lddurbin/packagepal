@@ -12,11 +12,10 @@ RoxygenNote: 7.2.3
 URL: https://github.com/lddurbin/packagepal
 BugReports: https://github.com/lddurbin/packagepal/issues
 Imports: 
-    available,
-    cli,
-    pkgbuild,
-    usethis,
-    utils
+    available (>= 1.1.0),
+    cli (>= 3.6.1),
+    usethis (>= 2.2.2),
+    utils (>= 4.2.3)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

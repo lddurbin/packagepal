@@ -49,7 +49,7 @@ package_checklist <- function() {
     "Update the DESCRIPTION file: edit the title, include author(s), write a one-paragraph description",
     "Add a package-level help page with {.code usethis::use_package_doc()}",
     "Run {.code devtools::check()} from time to time",
-    "Document your package dependencies with either {.code usethis::use_package('package_name')} or {.code usethis::use_import_from('package_name', 'function_name')}",
+    "Document your package dependencies with either {.code usethis::use_package('package_name', min_version = TRUE)} or {.code usethis::use_import_from('package_name', 'function_name')}",
     "Include a Citation File with {.code cffr::cff_write()}",
     "Add a README file with {.code usethis::use_readme_rmd()}",
     "Edit the README, and render the .Rmd file with {.code devtools::build_readme()}",
