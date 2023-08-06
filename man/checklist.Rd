@@ -17,3 +17,6 @@ The id of the new container element, invisibly.
 A check-list of things you should do when building a R package
 from scratch, or submitting a package to CRAN.
 }
+\examples{
+checklist("CRAN")
+}

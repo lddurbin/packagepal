@@ -64,6 +64,23 @@
       7. Create a GitHub release and prepare for the next version by incrementing the
       version number.
       8. Publicize the new version.
+      9. You have an un-exported function that you wrote a roxygen example section
+      for
+      10. You used \dontrun in an example and got a note about that
+      11. You have exported functions that don't have return value documentation
+      12. You have exported functions that don't have examples
+      13. You fail a noSuggests check
+      14. Your package DESCRIPTION Title is flagged
+      15. Your package DESCRIPTION Description is flagged
+      16. You get asked if there are any 'references describing the methods in your
+      package.'
+      17. You get asked about the LICENSE year
+      18. You get asked about being the copyright holder (cph)
+      19. You get told not to comment out code in your @examples section
+      20. You get a note like 'Please use fully specified URLs starting with the
+      protocol, e.g. https://...'
+      21. You get a note like 'Found the following (possibly) invalid file URI'
+      22. You get a note like 'Found the following (possibly) invalid URLs'
 
 # checklist dispatches the correct function based on type
 
@@ -131,6 +148,23 @@
       7. Create a GitHub release and prepare for the next version by incrementing the
       version number.
       8. Publicize the new version.
+      9. You have an un-exported function that you wrote a roxygen example section
+      for
+      10. You used \dontrun in an example and got a note about that
+      11. You have exported functions that don't have return value documentation
+      12. You have exported functions that don't have examples
+      13. You fail a noSuggests check
+      14. Your package DESCRIPTION Title is flagged
+      15. Your package DESCRIPTION Description is flagged
+      16. You get asked if there are any 'references describing the methods in your
+      package.'
+      17. You get asked about the LICENSE year
+      18. You get asked about being the copyright holder (cph)
+      19. You get told not to comment out code in your @examples section
+      20. You get a note like 'Please use fully specified URLs starting with the
+      protocol, e.g. https://...'
+      21. You get a note like 'Found the following (possibly) invalid file URI'
+      22. You get a note like 'Found the following (possibly) invalid URLs'
 
 ---
 
