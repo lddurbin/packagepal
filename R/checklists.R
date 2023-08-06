@@ -83,6 +83,20 @@ cran_checklist <- function() {
     "Perform reverse dependency checks, if other packages depend on yours.",
     "Submit the package to CRAN and wait for acceptance.",
     "Create a GitHub release and prepare for the next version by incrementing the version number.",
-    "Publicize the new version."
+    "Publicize the new version.",
+    "You have an un-exported function that you wrote a roxygen example section for",
+    "You used \dontrun{} in an example and got a note about that",
+    "You have exported functions that don’t have return value documentation",
+    "You have exported functions that don’t have examples",
+    "You fail a noSuggests check",
+    "Your package DESCRIPTION Title is flagged",
+    "Your package DESCRIPTION Description is flagged",
+    "You get asked if there are any “references describing the methods in your package.”",
+    "You get asked about the LICENSE year",
+    "You get asked about being the copyright holder (cph)",
+    "You get told not to comment out code in your @examples section",
+    "You get a note like “Please use fully specified URLs starting with the protocol, e.g. https://….”",
+    "You get a note like “Found the following (possibly) invalid file URI”",
+    "You get a note like “Found the following (possibly) invalid URLs”"
   ))
 }
