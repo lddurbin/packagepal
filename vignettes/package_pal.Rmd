@@ -18,15 +18,10 @@ knitr::opts_chunk$set(
 library(packagepal)
 ```
 
-Building packages in R can be tough, even for those of us who've made a few in the past. `packagepal` makes it a little easier in two ways: it has some functions to set you on the right path, and it provides a handy checklist of everything you need to think about as you progress with your package-building journey.
+Building packages in R can be tough, even for those of us who've made a few in the past. `packagepal` makes it a little easier in two ways: it has a handy checklist of everything you need to think about as you progress with your package-building journey.
 
-To get started with `packagepal`, call the following function and follow the instructions:
 
-```{r starting, eval=FALSE}
-packagepal::pal_start()
-```
-
-Alternatively, to see a check-list of recommendations for building a package, simply call:
+To get started with `packagepal`, simply call:
 
 ```{r package_checklist, eval=FALSE}
 packagepal::checklist()
