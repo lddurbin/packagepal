@@ -4,9 +4,9 @@
 \name{packagepal-package}
 \alias{packagepal}
 \alias{packagepal-package}
-\title{packagepal: A Package For Package Builders}
+\title{packagepal: Guidelines and Checklists for Building CRAN-Worthy Packages}
 \description{
-A suite of tools to help users on their journey towards building a package.
+Provides essential checklists for R package developers, whether you're creating your first package or beginning a new project. This tool guides you through each step of the development process, including specific considerations for submitting your package to the Comprehensive R Archive Network (CRAN). Simplify your workflow and ensure adherence to best practices with 'packagepal'."
 }
 \seealso{
 Useful links:
@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Lee Durbin \email{l.d.durbin@gmail.com}
+\strong{Maintainer}: Lee Durbin \email{l.d.durbin@gmail.com} [copyright holder]
 
 }
 \keyword{internal}
