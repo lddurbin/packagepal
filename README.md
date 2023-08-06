@@ -37,3 +37,7 @@ attend this workshop myself, the slides are [freely available
 online](https://rstudio-conf-2022.github.io/build-tidy-tools/) and
 taught me how to make my first R package. I still refer to them all the
 time.
+
+I have also borrowed ideas from *R Packages (2e)* by Hadley Wickham and
+Jennifer Bryan, as well as here:
+(<https://github.com/DavisVaughan/extrachecks>)\[<https://github.com/DavisVaughan/extrachecks>\]
