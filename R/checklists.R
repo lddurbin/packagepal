@@ -76,8 +76,13 @@ package_checklist <- function() {
 #' @noRd
 cran_checklist <- function() {
   cli::cli_ol(c(
-    "Item 1",
-    "Item 2",
-    "Item 3"
+    "Determine the release type, which dictates the version number",
+    "If the package is already on CRAN: Do due diligence on existing CRAN results. If this is a first release: confirm you are in compliance with CRAN policies.",
+    "Freshen up documentation files, such as README.md and NEWS.md.",
+    "Double check() that your package is passing cleanly on multiple operating systems and on the released and development version of R.",
+    "Perform reverse dependency checks, if other packages depend on yours.",
+    "Submit the package to CRAN and wait for acceptance.",
+    "Create a GitHub release and prepare for the next version by incrementing the version number.",
+    "Publicize the new version."
   ))
 }

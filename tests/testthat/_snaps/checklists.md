@@ -52,9 +52,18 @@
     Code
       cran_checklist()
     Message <cliMessage>
-      1. Item 1
-      2. Item 2
-      3. Item 3
+      1. Determine the release type, which dictates the version number
+      2. If the package is already on CRAN: Do due diligence on existing CRAN
+      results. If this is a first release: confirm you are in compliance with CRAN
+      policies.
+      3. Freshen up documentation files, such as README.md and NEWS.md.
+      4. Double check() that your package is passing cleanly on multiple operating
+      systems and on the released and development version of R.
+      5. Perform reverse dependency checks, if other packages depend on yours.
+      6. Submit the package to CRAN and wait for acceptance.
+      7. Create a GitHub release and prepare for the next version by incrementing the
+      version number.
+      8. Publicize the new version.
 
 # checklist dispatches the correct function based on type
 
@@ -110,9 +119,18 @@
     Code
       checklist(type = "CRAN")
     Message <cliMessage>
-      1. Item 1
-      2. Item 2
-      3. Item 3
+      1. Determine the release type, which dictates the version number
+      2. If the package is already on CRAN: Do due diligence on existing CRAN
+      results. If this is a first release: confirm you are in compliance with CRAN
+      policies.
+      3. Freshen up documentation files, such as README.md and NEWS.md.
+      4. Double check() that your package is passing cleanly on multiple operating
+      systems and on the released and development version of R.
+      5. Perform reverse dependency checks, if other packages depend on yours.
+      6. Submit the package to CRAN and wait for acceptance.
+      7. Create a GitHub release and prepare for the next version by incrementing the
+      version number.
+      8. Publicize the new version.
 
 ---
 
