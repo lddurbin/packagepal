@@ -40,4 +40,4 @@ time.
 
 I have also borrowed ideas from *R Packages (2e)* by Hadley Wickham and
 Jennifer Bryan, as well as here:
-(<https://github.com/DavisVaughan/extrachecks>)\[<https://github.com/DavisVaughan/extrachecks>\]
+<https://github.com/DavisVaughan/extrachecks>
