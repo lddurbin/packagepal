@@ -36,10 +36,10 @@ checklist <- function(type = "package") {
 #' @noRd
 package_checklist <- function() {
   cli::cli_ol(c(
-    "Install XCode (on MacOS) or Rtools (on Windows)",
-    "Install Git",
+    "Install {.href [XCode](https://developer.apple.com/xcode/resources/)} (on MacOS) or {.href [Rtools](https://cran.r-project.org/bin/windows/Rtools/)} (on Windows)",
+    "Install {.href [Git](https://git-scm.com/downloads)}",
     "Install the {.pkg devtools} package",
-    "Check if your package name is available with {.pkg available}",
+    "Check if your package name is available with {.code available::available('your_package_name')}",
     "Create your package with {.code usethis::create_create('path/package_name')} (but be deliberate about {.emph where} you create it!)",
     "Make your package a Git repository using {.code usethis::use_git()}",
     "Put the package on GitHub as a remote repository using {.code usethis::use_github()}",
@@ -79,27 +79,14 @@ package_checklist <- function() {
 #' @noRd
 cran_checklist <- function() {
   cli::cli_ol(c(
-    "Determine the release type, which dictates the version number",
-    "If the package is already on CRAN: Do due diligence on existing CRAN results. If this is a first release: confirm you are in compliance with CRAN policies.",
-    "Freshen up documentation files, such as README.md and NEWS.md.",
-    "Double check() that your package is passing cleanly on multiple operating systems and on the released and development version of R.",
-    "Perform reverse dependency checks, if other packages depend on yours.",
-    "Submit the package to CRAN and wait for acceptance.",
-    "Create a GitHub release and prepare for the next version by incrementing the version number.",
-    "Publicize the new version.",
-    "You have an un-exported function that you wrote a roxygen example section for",
-    "You used \\dontrun{} in an example and got a note about that",
-    "You have exported functions that don't have return value documentation",
-    "You have exported functions that don't have examples",
-    "You fail a noSuggests check",
-    "Your package DESCRIPTION Title is flagged",
-    "Your package DESCRIPTION Description is flagged",
-    "You get asked if there are any 'references describing the methods in your package.'",
-    "You get asked about the LICENSE year",
-    "You get asked about being the copyright holder (cph)",
-    "You get told not to comment out code in your @examples section",
-    "You get a note like 'Please use fully specified URLs starting with the protocol, e.g. https://...'",
-    "You get a note like 'Found the following (possibly) invalid file URI'",
-    "You get a note like 'Found the following (possibly) invalid URLs'"
+    "Determine the release type, which dictates the version number. Read more: {.href [https://r-pkgs.org/release.html#decide-the-release-type](https://r-pkgs.org/release.html#decide-the-release-type)}",
+    "If the package is already on CRAN: Do due diligence on existing CRAN results. If this is a first release: confirm you are in compliance with CRAN policies. Read more: {.href [https://r-pkgs.org/release.html#sec-release-initial](https://r-pkgs.org/release.html#sec-release-initial)}",
+    "Freshen up documentation files, such as README.md and NEWS.md. Read more: {.href [https://r-pkgs.org/release.html#keeping-up-with-change](https://r-pkgs.org/release.html#keeping-up-with-change)}",
+    "Double check() that your package is passing cleanly on multiple operating systems and on the released and development version of R. Read more: {.href [https://r-pkgs.org/release.html#double-r-cmd-checking](https://r-pkgs.org/release.html#double-r-cmd-checking)}",
+    "Perform reverse dependency checks, if other packages depend on yours. Read more: {.href [https://r-pkgs.org/release.html#sec-release-revdep-checks](https://r-pkgs.org/release.html#sec-release-revdep-checks)}",
+    "Address any extra ad-hoc checks that CRAN does that are not checked for by {.code devtools::check()}. Read more: {.href [https://github.com/DavisVaughan/extrachecks](https://github.com/DavisVaughan/extrachecks)}",
+    "Submit the package to CRAN and wait for acceptance. Read more: {.href [https://r-pkgs.org/release.html#sec-release-process](https://r-pkgs.org/release.html#sec-release-process)}",
+    "Create a GitHub release and prepare for the next version by incrementing the version number. Read more: {.href [https://r-pkgs.org/release.html#sec-release-post-acceptance](https://r-pkgs.org/release.html#sec-release-post-acceptance)}",
+    "Publicize the new version, and celebrate your success!"
   ))
 }

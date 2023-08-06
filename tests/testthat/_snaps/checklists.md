@@ -3,10 +3,12 @@
     Code
       package_checklist()
     Message <cliMessage>
-      1. Install XCode (on MacOS) or Rtools (on Windows)
-      2. Install Git
+      1. Install XCode (<https://developer.apple.com/xcode/resources/>) (on MacOS) or
+      Rtools (<https://cran.r-project.org/bin/windows/Rtools/>) (on Windows)
+      2. Install Git (<https://git-scm.com/downloads>)
       3. Install the devtools package
-      4. Check if your package name is available with available
+      4. Check if your package name is available with
+      `available::available('your_package_name')`
       5. Create your package with `usethis::create_create('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
@@ -52,45 +54,38 @@
     Code
       cran_checklist()
     Message <cliMessage>
-      1. Determine the release type, which dictates the version number
+      1. Determine the release type, which dictates the version number. Read more:
+      <https://r-pkgs.org/release.html#decide-the-release-type>
       2. If the package is already on CRAN: Do due diligence on existing CRAN
       results. If this is a first release: confirm you are in compliance with CRAN
-      policies.
-      3. Freshen up documentation files, such as README.md and NEWS.md.
+      policies. Read more: <https://r-pkgs.org/release.html#sec-release-initial>
+      3. Freshen up documentation files, such as README.md and NEWS.md. Read more:
+      <https://r-pkgs.org/release.html#keeping-up-with-change>
       4. Double check() that your package is passing cleanly on multiple operating
-      systems and on the released and development version of R.
-      5. Perform reverse dependency checks, if other packages depend on yours.
-      6. Submit the package to CRAN and wait for acceptance.
-      7. Create a GitHub release and prepare for the next version by incrementing the
-      version number.
-      8. Publicize the new version.
-      9. You have an un-exported function that you wrote a roxygen example section
-      for
-      10. You used \dontrun in an example and got a note about that
-      11. You have exported functions that don't have return value documentation
-      12. You have exported functions that don't have examples
-      13. You fail a noSuggests check
-      14. Your package DESCRIPTION Title is flagged
-      15. Your package DESCRIPTION Description is flagged
-      16. You get asked if there are any 'references describing the methods in your
-      package.'
-      17. You get asked about the LICENSE year
-      18. You get asked about being the copyright holder (cph)
-      19. You get told not to comment out code in your @examples section
-      20. You get a note like 'Please use fully specified URLs starting with the
-      protocol, e.g. https://...'
-      21. You get a note like 'Found the following (possibly) invalid file URI'
-      22. You get a note like 'Found the following (possibly) invalid URLs'
+      systems and on the released and development version of R. Read more:
+      <https://r-pkgs.org/release.html#double-r-cmd-checking>
+      5. Perform reverse dependency checks, if other packages depend on yours. Read
+      more: <https://r-pkgs.org/release.html#sec-release-revdep-checks>
+      6. Address any extra ad-hoc checks that CRAN does that are not checked for by
+      `devtools::check()`. Read more: <https://github.com/DavisVaughan/extrachecks>
+      7. Submit the package to CRAN and wait for acceptance. Read more:
+      <https://r-pkgs.org/release.html#sec-release-process>
+      8. Create a GitHub release and prepare for the next version by incrementing the
+      version number. Read more:
+      <https://r-pkgs.org/release.html#sec-release-post-acceptance>
+      9. Publicize the new version, and celebrate your success!
 
 # checklist dispatches the correct function based on type
 
     Code
       checklist(type = "package")
     Message <cliMessage>
-      1. Install XCode (on MacOS) or Rtools (on Windows)
-      2. Install Git
+      1. Install XCode (<https://developer.apple.com/xcode/resources/>) (on MacOS) or
+      Rtools (<https://cran.r-project.org/bin/windows/Rtools/>) (on Windows)
+      2. Install Git (<https://git-scm.com/downloads>)
       3. Install the devtools package
-      4. Check if your package name is available with available
+      4. Check if your package name is available with
+      `available::available('your_package_name')`
       5. Create your package with `usethis::create_create('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
@@ -136,35 +131,26 @@
     Code
       checklist(type = "CRAN")
     Message <cliMessage>
-      1. Determine the release type, which dictates the version number
+      1. Determine the release type, which dictates the version number. Read more:
+      <https://r-pkgs.org/release.html#decide-the-release-type>
       2. If the package is already on CRAN: Do due diligence on existing CRAN
       results. If this is a first release: confirm you are in compliance with CRAN
-      policies.
-      3. Freshen up documentation files, such as README.md and NEWS.md.
+      policies. Read more: <https://r-pkgs.org/release.html#sec-release-initial>
+      3. Freshen up documentation files, such as README.md and NEWS.md. Read more:
+      <https://r-pkgs.org/release.html#keeping-up-with-change>
       4. Double check() that your package is passing cleanly on multiple operating
-      systems and on the released and development version of R.
-      5. Perform reverse dependency checks, if other packages depend on yours.
-      6. Submit the package to CRAN and wait for acceptance.
-      7. Create a GitHub release and prepare for the next version by incrementing the
-      version number.
-      8. Publicize the new version.
-      9. You have an un-exported function that you wrote a roxygen example section
-      for
-      10. You used \dontrun in an example and got a note about that
-      11. You have exported functions that don't have return value documentation
-      12. You have exported functions that don't have examples
-      13. You fail a noSuggests check
-      14. Your package DESCRIPTION Title is flagged
-      15. Your package DESCRIPTION Description is flagged
-      16. You get asked if there are any 'references describing the methods in your
-      package.'
-      17. You get asked about the LICENSE year
-      18. You get asked about being the copyright holder (cph)
-      19. You get told not to comment out code in your @examples section
-      20. You get a note like 'Please use fully specified URLs starting with the
-      protocol, e.g. https://...'
-      21. You get a note like 'Found the following (possibly) invalid file URI'
-      22. You get a note like 'Found the following (possibly) invalid URLs'
+      systems and on the released and development version of R. Read more:
+      <https://r-pkgs.org/release.html#double-r-cmd-checking>
+      5. Perform reverse dependency checks, if other packages depend on yours. Read
+      more: <https://r-pkgs.org/release.html#sec-release-revdep-checks>
+      6. Address any extra ad-hoc checks that CRAN does that are not checked for by
+      `devtools::check()`. Read more: <https://github.com/DavisVaughan/extrachecks>
+      7. Submit the package to CRAN and wait for acceptance. Read more:
+      <https://r-pkgs.org/release.html#sec-release-process>
+      8. Create a GitHub release and prepare for the next version by incrementing the
+      version number. Read more:
+      <https://r-pkgs.org/release.html#sec-release-post-acceptance>
+      9. Publicize the new version, and celebrate your success!
 
 ---
 
