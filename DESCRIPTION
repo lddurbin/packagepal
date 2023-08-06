@@ -1,6 +1,6 @@
 Package: packagepal
 Title: Guidelines and Checklists for Building CRAN-Worthy Packages
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Lee", "Durbin", , "l.d.durbin@gmail.com", role = c("aut", "cre", "cph"))
 Description: Provides essential checklists for R package developers, whether 
