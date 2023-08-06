@@ -14,9 +14,7 @@
 pal_start <- function(install_missing_packages = FALSE) {
   check_for_package_development_toolchain()
   ui_info("Check if you have Git installed by running 'git --version' in the Terminal. If you don't, browse to https://git-scm.com/downloads")
-  if(interactive()) {
-    check_for_package("devtools", install_missing_packages)
-  }
+  check_for_package("devtools", install_missing_packages)
 
   ui_info("You can check your GitHub token status with {ui_code('usethis::gh_token_help()')}")
   ui_info("When you're ready, you can call {ui_code('available()')} or go straight to {ui_code('usethis::create_package()')} to continue.")

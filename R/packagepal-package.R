@@ -3,6 +3,7 @@
 
 ## usethis namespace: start
 #' @importFrom available available
+#' @importFrom usethis ui_code
 #' @importFrom usethis ui_done
 #' @importFrom usethis ui_info
 #' @importFrom usethis ui_nope

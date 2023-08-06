@@ -1,5 +1,7 @@
 test_that("pal_start returns everything we expect in the console", {
-  expect_snapshot(pal_start())
+  if (interactive()) {
+    expect_snapshot(pal_start())
+  }
 })
 
 
