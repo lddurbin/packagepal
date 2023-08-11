@@ -3,12 +3,12 @@ Title: Guidelines and Checklists for Building CRAN-Worthy Packages
 Version: 0.1.0
 Authors@R: 
     person("Lee", "Durbin", , "l.d.durbin@gmail.com", role = c("aut", "cre", "cph"))
-Description: Provides essential checklists for R package developers, whether 
-    you're creating your first package or beginning a new project. This tool 
-    guides you through each step of the development process, including specific 
-    considerations for submitting your package to the Comprehensive R Archive 
-    Network (CRAN). Simplify your workflow and ensure adherence to best 
-    practices with 'packagepal'."
+Description: Provides essential checklists for R package developers, whether
+    you're creating your first package or beginning a new project. This tool
+    guides you through each step of the development process, including specific
+    considerations for submitting your package to the Comprehensive R Archive
+    Network (CRAN). Simplify your workflow and ensure adherence to best
+    practices with 'packagepal'.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
