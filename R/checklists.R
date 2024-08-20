@@ -21,8 +21,10 @@ checklist <- function(type = "package") {
   if(type %in% c("CRAN", "cran")) {
     return(cran_checklist())
   }
-
-  return(ui_oops("Invalid check-list type: should be either 'package' or 'CRAN'."))
+  cli::cli_inform(c(
+    "x" = "Invalid check-list type: should be either 'package' or 'CRAN'."
+  ))
+  return(invisible())
 }
 
 
