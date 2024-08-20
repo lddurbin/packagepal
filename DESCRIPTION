@@ -12,11 +12,10 @@ Description: Provides essential checklists for R package developers, whether
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 URL: https://github.com/lddurbin/packagepal
 BugReports: https://github.com/lddurbin/packagepal/issues
 Imports: 
-    available (>= 1.1.0),
     cli (>= 3.6.1),
     usethis (>= 2.2.2),
     utils (>= 4.2.3)

@@ -2,13 +2,13 @@
 
     Code
       package_checklist()
-    Message <cliMessage>
+    Message
       1. Install XCode (<https://developer.apple.com/xcode/resources/>) (on MacOS) or
       Rtools (<https://cran.r-project.org/bin/windows/Rtools/>) (on Windows)
       2. Install Git (<https://git-scm.com/downloads>)
       3. Install the devtools package
       4. Check if your package name is available with
-      `available::available('your_package_name')`
+      `pak::pkg_name_check('your_package_name')`
       5. Create your package with `usethis::create_create('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
@@ -53,7 +53,7 @@
 
     Code
       cran_checklist()
-    Message <cliMessage>
+    Message
       1. Determine the release type, which dictates the version number. Read more:
       <https://r-pkgs.org/release.html#decide-the-release-type>
       2. If the package is already on CRAN: Do due diligence on existing CRAN
@@ -79,13 +79,13 @@
 
     Code
       checklist(type = "package")
-    Message <cliMessage>
+    Message
       1. Install XCode (<https://developer.apple.com/xcode/resources/>) (on MacOS) or
       Rtools (<https://cran.r-project.org/bin/windows/Rtools/>) (on Windows)
       2. Install Git (<https://git-scm.com/downloads>)
       3. Install the devtools package
       4. Check if your package name is available with
-      `available::available('your_package_name')`
+      `pak::pkg_name_check('your_package_name')`
       5. Create your package with `usethis::create_create('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
@@ -130,7 +130,7 @@
 
     Code
       checklist(type = "CRAN")
-    Message <cliMessage>
+    Message
       1. Determine the release type, which dictates the version number. Read more:
       <https://r-pkgs.org/release.html#decide-the-release-type>
       2. If the package is already on CRAN: Do due diligence on existing CRAN
@@ -156,6 +156,6 @@
 
     Code
       checklist(type = "invalid_type")
-    Message <rlang_message>
+    Message
       x Invalid check-list type: should be either 'package' or 'CRAN'.
 
