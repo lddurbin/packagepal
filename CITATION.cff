@@ -2,7 +2,7 @@
 # CITATION file created with {cffr} R package, v0.5.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite package "packagepal" in publications use:'
 type: software
@@ -22,26 +22,6 @@ contact:
   email: l.d.durbin@gmail.com
 references:
 - type: software
-  title: available
-  abstract: 'available: Check if the Title of a Package is Available, Appropriate
-    and Interesting'
-  notes: Imports
-  url: https://github.com/r-lib/available
-  repository: https://CRAN.R-project.org/package=available
-  authors:
-  - family-names: Ganz
-    given-names: Carl
-  - family-names: Csárdi
-    given-names: Gábor
-    email: csardi.gabor@gmail.com
-  - family-names: Hester
-    given-names: Jim
-  - family-names: Lewis
-    given-names: Molly
-  - family-names: Tatman
-    given-names: Rachael
-  year: '2023'
-- type: software
   title: cli
   abstract: 'cli: Helpers for Developing Command Line Interfaces'
   notes: Imports
@@ -51,23 +31,6 @@ references:
   - family-names: Csárdi
     given-names: Gábor
     email: csardi.gabor@gmail.com
-  year: '2023'
-- type: software
-  title: mockery
-  abstract: 'mockery: Mocking Library for R'
-  notes: Imports
-  url: https://github.com/r-lib/mockery
-  repository: https://CRAN.R-project.org/package=mockery
-  authors:
-  - family-names: Finkelstein
-    given-names: Noam
-  - family-names: Bartnik
-    given-names: Lukasz
-  - family-names: Hester
-    given-names: Jim
-  - family-names: Wickham
-    given-names: Hadley
-    email: hadley@rstudio.com
   year: '2023'
 - type: software
   title: pkgbuild
