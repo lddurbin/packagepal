@@ -63,28 +63,6 @@
       ],
       "Hash": "e8a22846fff485f0be3770c2da758713"
     },
-    "available": {
-      "Package": "available",
-      "Version": "1.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "SnowballC",
-        "cli",
-        "clisymbols",
-        "crayon",
-        "desc",
-        "glue",
-        "jsonlite",
-        "memoise",
-        "stringdist",
-        "tibble",
-        "tidytext",
-        "yesno"
-      ],
-      "Hash": "5d0f7d92f3b12c79530eba0f60456e76"
-    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
