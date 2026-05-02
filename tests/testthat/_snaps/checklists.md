@@ -33,7 +33,7 @@
       19. Add a README file with `usethis::use_readme_rmd()`
       20. Edit the README, and render the .Rmd file with `devtools::build_readme()`
       21. Add the R CMD check GitHub action with
-      `usethis::use_github_action_check_standard()`
+      `usethis::use_github_action('check-standard')`
       22. Add a vignette, such as `usethis::use_vignette('package_pal')`. Edit the
       .Rmd file, then preview using
       `devtools::build_rmd('vignettes/package_pal.Rmd')`
@@ -110,7 +110,7 @@
       19. Add a README file with `usethis::use_readme_rmd()`
       20. Edit the README, and render the .Rmd file with `devtools::build_readme()`
       21. Add the R CMD check GitHub action with
-      `usethis::use_github_action_check_standard()`
+      `usethis::use_github_action('check-standard')`
       22. Add a vignette, such as `usethis::use_vignette('package_pal')`. Edit the
       .Rmd file, then preview using
       `devtools::build_rmd('vignettes/package_pal.Rmd')`

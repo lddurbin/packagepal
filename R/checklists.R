@@ -58,7 +58,7 @@ package_checklist <- function() {
     "Include a Citation File with {.code cffr::cff_write()}",
     "Add a README file with {.code usethis::use_readme_rmd()}",
     "Edit the README, and render the .Rmd file with {.code devtools::build_readme()}",
-    "Add the R CMD check GitHub action with {.code usethis::use_github_action_check_standard()}",
+    "Add the R CMD check GitHub action with {.code usethis::use_github_action('check-standard')}",
     "Add a vignette, such as {.code usethis::use_vignette('package_pal')}. Edit the .Rmd file, then preview using {.code devtools::build_rmd('vignettes/package_pal.Rmd')}",
     "Configure your package for {.pkg pkgdown} with {.code usethis::use_pkgdown() }",
     "Build the website locally with {.code pkgdown::build_site()}",
