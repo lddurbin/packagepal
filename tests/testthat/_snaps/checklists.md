@@ -9,7 +9,7 @@
       3. Install the devtools package
       4. Check if your package name is available with
       `pak::pkg_name_check('your_package_name')`
-      5. Create your package with `usethis::create_create('path/package_name')` (but
+      5. Create your package with `usethis::create_package('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
       7. Put the package on GitHub as a remote repository using
@@ -86,7 +86,7 @@
       3. Install the devtools package
       4. Check if your package name is available with
       `pak::pkg_name_check('your_package_name')`
-      5. Create your package with `usethis::create_create('path/package_name')` (but
+      5. Create your package with `usethis::create_package('path/package_name')` (but
       be deliberate about where you create it!)
       6. Make your package a Git repository using `usethis::use_git()`
       7. Put the package on GitHub as a remote repository using

@@ -42,7 +42,7 @@ package_checklist <- function() {
     "Install {.href [Git](https://git-scm.com/downloads)}",
     "Install the {.pkg devtools} package",
     "Check if your package name is available with {.code pak::pkg_name_check('your_package_name')}",
-    "Create your package with {.code usethis::create_create('path/package_name')} (but be deliberate about {.emph where} you create it!)",
+    "Create your package with {.code usethis::create_package('path/package_name')} (but be deliberate about {.emph where} you create it!)",
     "Make your package a Git repository using {.code usethis::use_git()}",
     "Put the package on GitHub as a remote repository using {.code usethis::use_github()}",
     "Create your first R script via {.code usethis::use_r('my_function')}",
