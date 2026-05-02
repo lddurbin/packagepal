@@ -1,5 +1,7 @@
 ^renv$
 ^renv\.lock$
+^\.claude$
+^CLAUDE\.md$
 ^packagepal\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
